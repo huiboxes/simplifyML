@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<span style="display: none">{{ FHOST }}</span>
+<script>
+    !function () {
+        location.href = document.querySelectorAll('span')[0].innerText
+        alert('恭喜，已成功激活账号')
+    }()
+</script>
+</body>
+</html>

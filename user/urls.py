@@ -5,3 +5,6 @@ urlpatterns = [
     path('', views.users),
     path('/activation', views.user_active)
 ]
+
+
+

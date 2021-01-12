@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -27,7 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -40,6 +39,8 @@ INSTALLED_APPS = [
     'corsheaders',
     'user',
     'mtoken',
+    'ml',
+    'article',
 ]
 
 MIDDLEWARE = [
@@ -51,7 +52,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-
+    'django.template.context_processors.media',
 ]
 
 ROOT_URLCONF = 'simplifyML.urls'
@@ -59,7 +60,7 @@ ROOT_URLCONF = 'simplifyML.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR,'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -142,14 +143,17 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = '/static/'
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+MEDIA_URL = '/media/'
 
+STATIC_URL = '/static/'
 try:
     from .local_settings import *
 except ImportError:
     pass
 
 CORS_ORIGIN_ALLOW_ALL = True
+ALLOWED_HOSTS = ['*']
 
 CORS_ALLOW_METHODS = (
     'POST',
@@ -180,9 +184,12 @@ EMAIL_HOST_USER = '87802071@qq.com'
 EMAIL_HOST_PASSWORD = 'bllkqgjhkdfobhgh'
 EMAIL_USE_TLS = False
 
+# 本地测试后端服务器
 HOST = 'http://127.0.0.1:8000'
-
+# 前端服务器
+FHOST = 'http://192.168.43.144'
+# 后端服务器
+THOST = 'http://192.168.43.66:8000'
 # 路由结尾不是 / 时，访问路由会302到有 / 的地址。并且有一个warning。
 APPEND_SLASH = False
-
 
