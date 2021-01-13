@@ -20,7 +20,6 @@ def logging_check(func):
         user = UserProfile.object.get(username=username)
         request.myuser = user
 
-
         return func(self, request, *args, **kwargs)
 
     return wrapper

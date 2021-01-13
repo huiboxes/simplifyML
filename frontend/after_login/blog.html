@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>admin</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <!-- Fontastic Custom icon font-->
+    <link rel="stylesheet" href="css/fontastic.css">
+    <!-- main-->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Google fonts - Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <!-- jQuery Circle-->
+    <link rel="stylesheet" href="css/grasp_mobile_progress_circle-1.0.0.min.css">
+    <!-- Custom Scrollbar-->
+    <link rel="stylesheet" href="vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+    <!-- upload -->
+    <script id="jquery_172" type="text/javascript" class="library" src="upload/js/jquery-1.7.2.min.js"></script>
+    <style>
+        .blog_main > h3{width: 100%;padding: 30px 0;font-size: 27px;}
+      .case{overflow: hidden;padding: 20px;box-shadow: 2px 2px 4px #ccc;margin-bottom: 10px;transition: 0.3s;}
+      a:hover{text-decoration: none;}
+      a:visited{text-decoration: none;}
+      .case:hover{background-color: #eee;}
+      .case >  img{width: 210px;height: 150px;object-fit:cover}
+      .case >  div > h5{font-size: 23px;color: green;}
+      .single_aside{padding: 10px;background-color: #eee;}
+      .single_aside > a{display: block;width: 100%;padding: 10px;transition: 0.4s;font-weight: bold;font-size: 27px;background-color: #666;color: #fff;}
+      .single_aside2{margin-top: 10px;padding: 10px;background-color: #eee;}
+      .single_aside2 > h3{padding: 20px 0 10px 10px;color:#333;font-size: 23px;}
+      .single_aside2 > a{display: block;width: 100%;padding: 6px;transition: 0.3s;color: #666;}
+      .media-body > h5{color: #333 !important;}
+      .media-body{color: #666;}
+    </style>
+  </head>
+  <body>
+    <!-- Side Navbar -->
+    <nav class="side-navbar">
+      <div class="side-navbar-wrapper">
+        <!-- Sidebar Header    -->
+        <div class="sidenav-header d-flex align-items-center justify-content-center">
+          <!-- User Info-->
+          <div class="sidenav-header-inner text-center"><img src="img/avatar-7.jpg" alt="person" class="img-fluid rounded-circle">
+            <h2 class="h5">Nathan Andrews</h2><span>Web Developer</span>
+          </div>
+          <!-- Small Brand information, appears on minimized sidebar-->
+          <div class="sidenav-header-logo"><a href="index.html" class="brand-small text-center"> <strong>B</strong><strong class="text-primary">D</strong></a></div>
+        </div>
+        <!-- Sidebar Navigation Menus-->
+        <div class="main-menu">
+          <h5 class="sidenav-heading">Main</h5>
+          <ul id="side-main-menu" class="side-menu list-unstyled">                  
+            <li><a href="index.html"> <i class="icon-home"></i>训练场                             </a></li>
+            <li><a href="blog.html"> <i class="icon-form"></i>Wiki                             </a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="page">
+      <!-- navbar-->
+      <header class="header">
+        <nav class="navbar">
+          <div class="container-fluid">
+            <div class="navbar-holder d-flex align-items-center justify-content-between">
+              <div class="navbar-header"><a id="toggle-btn" href="#" class="menu-btn"><i class="icon-bars"> </i></a><a href="index.html" class="navbar-brand">
+                  <div class="brand-text d-none d-md-inline-block"><span>简树控制台</span></div></a></div>
+              <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
+                <!-- Log out-->
+                <li class="nav-item"><a href="login.html" class="nav-link logout"> <span class="d-none d-sm-inline-block">Logout</span><i class="fa fa-sign-out"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <!-- main section -->
+      <section class="container blog_main">
+        <h3>最新文章</h3>
+        <div class="row">
+            <div class="col-md-8">
+                <a class="media case" href="#">
+                    <img src="http://beixiongxiong.oss-cn-hangzhou.aliyuncs.com/media/editor/20190508103149_927497.png" class="mr-3">
+                    <div class="media-body">
+                      <h5 class="mt-0">k近邻算法</h5>
+                      KNN是通过测量不同特征值之间的距离进行分类。它的思路是：如果一个样本在特征空间中的k个最相似(即特征空间中最邻近)的样本中的大多数属于某一个类别，则该样本也属于这个类别，其中K通常是不大于20的整数。
+                    </div>
+                </a>
+
+                <a class="media case" href="#">
+                    <img src="http://beixiongxiong.oss-cn-hangzhou.aliyuncs.com/media/editor/20190508142645_734416.png" class="mr-3">
+                    <div class="media-body">
+                      <h5 class="mt-0">朴素贝叶斯算法</h5>
+                      在了解朴素贝叶斯的算法之前，我们需要对相关必须的统计学知识做一个回顾。贝叶斯学派的思想可以概括为先验概率+数据=后验概率。也就是说我们在实际问题中需要得到的后验概率，可以通过先验概率和数据一起综合得到。
+                    </div>
+                </a>
+
+                <a class="media case" href="#">
+                    <img src="http://beixiongxiong.oss-cn-hangzhou.aliyuncs.com/media/editor/20190508155439_444474.png" class="mr-3">
+                    <div class="media-body">
+                      <h5 class="mt-0">决策树</h5>
+                      决策树学习的算法通常是一个递归地选择最优特征，并根据该特征对训练数据集进行分割，使得对各个子数据集有一个最好的分类过程，这一过程对应着对特征空间的划分，也对应着决策树的构建。
+                    </div>
+                </a>
+
+                <a class="media case" href="#">
+                    <img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1302850122,2227483638&fm=26&gp=0.jpg" class="mr-3">
+                    <div class="media-body">
+                      <h5 class="mt-0">标题</h5>
+                      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <div class="single_aside">
+                    <a href="write.html"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-vector-pen" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M10.646.646a.5.5 0 0 1 .708 0l4 4a.5.5 0 0 1 0 .708l-1.902 1.902-.829 3.313a1.5 1.5 0 0 1-1.024 1.073L1.254 14.746 4.358 4.4A1.5 1.5 0 0 1 5.43 3.377l3.313-.828L10.646.646zm-1.8 2.908l-3.173.793a.5.5 0 0 0-.358.342l-2.57 8.565 8.567-2.57a.5.5 0 0 0 .34-.357l.794-3.174-3.6-3.6z"/>
+                        <path fill-rule="evenodd" d="M2.832 13.228L8 9a1 1 0 1 0-1-1l-4.228 5.168-.026.086.086-.026z"/>
+                      </svg>&nbsp;&nbsp;发布</a>
+                </div>
+                <div class="single_aside2">
+                    <h3>友情推荐</h3>
+                    <a href="https://ai.cnmo.com/news/682755.html">机器人协助研究员开展南极保护计划</a>
+                    <a href="https://ai.cnmo.com/news/681884.html">大脑信号转化为文本数据</a>
+                    <a href="https://phone.cnmo.com/news/675137.html">苹果收购机器学习初创公司</a>
+                    <a href="https://ai.cnmo.com/news/671941.html">谷歌正在训练能识别气味的人工智能</a>
+                    <a href="https://ai.cnmo.com/news/662240.html">你的人工智能导游已上线</a>
+                    <a href="https://ai.cnmo.com/news/661066.html">打造无垃圾世界太魔幻？</a>
+                    <a href="https://ai.cnmo.com/news/660813.html">可空投的机器人冲锋陷阵</a>
+                    <a href="https://ai.cnmo.com/news/660649.html">美国能源部门斥巨资发展人工智能</a>
+                    <a href="https://www.cnmo.com/news/657546.html">IBM Research引发重大突破</a>
+                    <a href="https://www.cnmo.com/news/657300.html">机器学习框架重大升级</a>
+                    <a href="https://www.cnmo.com/news/656999.html">人工智能步入“青春期”</a>
+                    <a href="https://www.cnmo.com/news/656430.html">人工智能界的又一匹黑马</a>
+                </div>
+            </div>
+        </div>
+      </section>
+    </div>
+    <!-- JavaScript files-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper.js/umd/popper.min.js"> </script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/grasp_mobile_progress_circle-1.0.0.min.js"></script>
+    <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
+    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="vendor/jquery-validation/jquery.validate.min.js"></script>
+    <script src="vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/charts-home.js"></script>
+    <!-- Main File-->
+    <script src="js/front.js"></script>
+  </body>
+</html>

@@ -52,7 +52,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django.template.context_processors.media',
 ]
 
 ROOT_URLCONF = 'simplifyML.urls'
@@ -147,6 +146,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 MEDIA_URL = '/media/'
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
 try:
     from .local_settings import *
 except ImportError:
@@ -187,9 +189,11 @@ EMAIL_USE_TLS = False
 # 本地测试后端服务器
 HOST = 'http://127.0.0.1:8000'
 # 前端服务器
-FHOST = 'http://192.168.43.144'
+# FHOST = 'http://192.168.43.144'
+FHOST = 'http://127.0.0.1'
 # 后端服务器
-THOST = 'http://192.168.43.66:8000'
+THOST = 'http://127.0.0.1:8000'
+# THOST = 'http://192.168.43.66:8000'
 # 路由结尾不是 / 时，访问路由会302到有 / 的地址。并且有一个warning。
 APPEND_SLASH = False
 

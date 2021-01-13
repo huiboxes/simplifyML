@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="./bootstrapvalidator-master/dist/js/bootstrapValidator.js"></script>
+    <link href="./bootstrapvalidator-master/dist/css/bootstrapValidator.css" rel="stylesheet" />
+<style>
+    a:hover{text-decoration: none;}
+    .head_main{width: 100%;box-shadow: 0 0 5px #ccc;}
+    .nav_main{width: 100%;max-width: 1080px;margin: 0 auto;}
+    .logo_main{max-width: 100px;}
+    .login_btn{background-color: #25b864;padding: 6px 15px;color: #fff !important;border-radius: 4px;}
+    .login_btn:nth-child(1){background-color: #fff;border: 1px solid #ccc;color: #333 !important;padding: 5px 13px;}
+    .content_home{max-width: 1080px;margin: 0 auto;}
+    .content_home > h5{width: 100%;font-size: 34px;padding: 65px 0 55px 0;text-align: center;font-weight: bold;}
+    .content_home > h5:nth-child(1){padding: 45px 0 35px 0;}
+    .content_home > p{width: 100%;font-size: 19px;text-align: center;padding-bottom: 35px;}
+    .content_home > a{display: block;padding: 40px 0; color: green;text-align: center;font-size: 21px;}
+    .content_home img{width: 100%;}
+    .content_item{padding-top: 20px;}
+    .content_banner{text-align: center;}
+    .content_banner > img{width: 60px;height: 60px;}
+    .content_banner > h6{margin-top: 10px;}
+    .play_banner > h5{font-size: 23px;font-weight: bold;padding-bottom: 20px;}
+    .play_banner > p{padding-bottom: 30px;}
+    .play_banner > a{background-color: #25b864;padding: 7px 15px;color: #fff !important;}
+    .play_banner{background-image: url('https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.51miz.com%2FElement%2F00%2F71%2F19%2F50%2F16a46b43_E711950_b9138372.jpg%21%2Fquality%2F90%2Funsharp%2Ftrue%2Fcompress%2Ftrue%2Fformat%2Fjpg&refer=http%3A%2F%2Fimg.51miz.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1611816689&t=5d86d9bd073259c091a769d5caa0e3dd');background-size: 100%;}
+    /* footer */
+    .foot_home{width: 100%;text-align: center;padding: 60px 0 20px 0;}
+    .foot_nav > a{color: #666;padding: 0 10px;font-size: 14px;}
+    .foot_nav > a:nth-child(5){color: #25b864 !important;}
+    .foot_home > p{color: #666;font-size: 14px;padding-top: 20px;}
+    small{color:brown}
+</style>
+</head>
+<body>
+<header class="head_main">
+    <nav class="navbar navbar-expand-lg navbar-light nav_main">
+        <a class="navbar-brand" href="index.html"><img src="img/logo.jpg" alt="" class="logo_main"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="Product_function.html">产品功能</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">关于</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <!-- Button trigger modal -->
+            <a class="login_btn" data-toggle="modal" data-target="#exampleModal" id="indexLogin">
+                登录
+            </a>
+            &nbsp;&nbsp;
+            <a class="login_btn" data-toggle="modal" id="register" data-target="#exampleModal2">
+              立即注册
+          </a>
+          </form>
+        </div>
+    </nav>
+</header>
+<section class="content_home">
+  <h5>机器学习数据可视化平台</h5>
+  <p>面向个人和团队，提供与众不同的知识管理，打造轻松流畅的工作协同。</p>
+  <img src="https://gw.alipayobjects.com/mdn/prod_resou/afts/img/A*QT3DQZcBDqwAAAAAAAAAAABjARQnAQ" alt="">
+  
+  <div class="row">
+    <div class="col-5">
+      <img src="https://gw.alipayobjects.com/mdn/prod_resou/afts/img/A*YLncT72jyq8AAAAAAAAAAABjARQnAQ" alt="">
+    </div>
+    <div class="col-7 play_banner">
+      <h5>简树机器学习可视化平台</h5>
+      <!-- <p>面向企业或组织，提供全新的体系化知识管理<br>让协作更高效，让知识成为财富。</p> -->
+      <!-- <a href="">立即使用</a> -->
+    </div>
+  </div>
+</section>
+<footer class="foot_home">
+  <!-- <img src="logo.jpg" alt=""> -->
+  <div class="foot_nav">
+    <a href="">关于我们</a>
+    <a href="">使用帮助</a>
+    <a href="">数据安全</a>
+    <a href="">服务协议</a>
+    <a href="">立即注册</a>
+  </div>
+  <p>&copy; 简树 限内部人员学习使用，感谢您的访问！</p>
+</footer>
+<!-- 登录 -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">用户登录</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form id="login-form">
+                <div class="form-group">
+                  <label for="username2">用户名</label>
+                  <input type="text" class="form-control" id="user_name2" name="username2">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword2">密码</label>
+                  <input type="password" class="form-control" id="exampleInputPassword2" name="password2">
+                </div>
+                <div style="text-align: center;">
+                  <button type="submit" class="btn btn-primary" id="login-btn" style="margin-right: 4px;">登录</button>
+                  <button type="reset" class="btn btn-secondary" style="margin-left: 4px;">重置</button>
+                </div>
+              </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 注册 -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">用户注册</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form id="register-form">
+                <div class="form-group">
+                  <label for="username">用户名</label>
+                  <input type="text" class="form-control" id="user_name" name="username">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">邮箱</label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" name="email">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">密码</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+                </div>
+                <div class="form-group">
+                  <label for="number">手机号</label>
+                  <input type="number" class="form-control" id="number" name="number">
+                </div>
+                <div style="text-align: center;">
+                  <button type="submit" class="btn btn-primary" id="register-btn" style="margin-right: 4px;">注册</button>
+                  <button type="reset" class="btn btn-secondary" style="margin-left: 4px;">重置</button>
+                </div>
+              </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/main.js"></script>
+  <script>
+    $(function () {
+        $('#register-form').bootstrapValidator({
+　　　　　　　　message: 'This value is not valid',
+            　feedbackIcons: {
+                　　　　　　　　valid: 'glyphicon glyphicon-ok',
+                　　　　　　　　invalid: 'glyphicon glyphicon-remove',
+                　　　　　　　　validating: 'glyphicon glyphicon-refresh'
+            　　　　　　　　   },
+            fields: {
+                username: {
+                    // message: '用户名验证失败',
+                    validators: {
+                        notEmpty: {
+                            message: '用户名不能为空'
+                        },
+                        stringLength: {
+                            min: 6,
+                            max: 18,
+                            message: '用户名长度必须在6到18位之间'
+                        },
+                        regexp: {
+                            regexp: /^[a-zA-Z0-9_]+$/,
+                            message: '用户名只能包含大写、小写、数字和下划线'
+                        }
+                    }
+                    
+                },
+                email: {
+                    validators: {
+                        notEmpty: {
+                            message: '邮箱地址不能为空'
+                        },
+                        emailAddress: {   //验证email地址
+                          message: '不是正确的email地址'
+                        }
+                    }
+                },
+                password : {
+                    validators: {
+                        notEmpty: {
+                            message: '密码不能为空'
+                        },
+                        stringLength: {   //检测长度
+                          min: 4,
+                          max: 15,
+                          message: '密码需要在4~15个字符'
+                        }
+                    }
+                },
+                number : {
+                    validators: {
+                        notEmpty: {
+                            message: '手机号不能为空'
+                        },
+                        stringLength: {
+                            min: 11,
+                            max: 11,
+                            message: '手机号在11位'
+                        },
+                    }
+                }
+            }
+        });
+    });
+    $(function () {
+        $('#login-form').bootstrapValidator({
+　　　　　　　　message: 'This value is not valid',
+            　feedbackIcons: {
+                　　　　　　　　valid: 'glyphicon glyphicon-ok',
+                　　　　　　　　invalid: 'glyphicon glyphicon-remove',
+                　　　　　　　　validating: 'glyphicon glyphicon-refresh'
+            　　　　　　　　   },
+            fields: {
+                username2: {
+                    validators: {
+                        notEmpty: {
+                            message: '用户名不能为空'
+                        },
+                        stringLength: {
+                            min: 6,
+                            max: 18,
+                            message: '用户名长度必须在6到18位之间'
+                        },
+                        regexp: {
+                            regexp: /^[a-zA-Z0-9_]+$/,
+                            message: '用户名只能包含大写、小写、数字和下划线'
+                        }
+                    },
+                    
+                },
+                password2 : {
+                    validators: {
+                        notEmpty: {
+                            message: '密码不能为空'
+                        },
+                        stringLength: {   //检测长度
+                          min: 4,
+                          max: 15,
+                          message: '密码长度在4~15个字符'
+                        }
+                    }
+                },
+            }
+        });
+    });
+  </script>
+  
+</body>
+</html>
