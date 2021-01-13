@@ -10,7 +10,7 @@ import base64
 
 from .models import UserProfile
 from mtoken.views import make_token
-from .tasks import send_active_email_cerery
+from .tasks import send_active_email_celery
 
 # Create your views here.
 
@@ -57,8 +57,8 @@ def users(request):
         # 存储随机数
         EMAIL_CACHE.set('email_active_%s' % (username), code, 3600 * 24 * 3)
         verify_url = settings.THOST + '/v1/users/activation?code=%s' % (code_bs.decode())
-        send_active_email(email, verify_url)
-        # send_active_email_cerery.delay(email, verify_url)
+        # send_active_email(email, verify_url)
+        send_active_email_celery.delay(email, verify_url)
         return JsonResponse({'code': 200, 'username': username, 'data': {'token': token}})
 
 
