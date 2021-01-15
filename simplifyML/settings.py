@@ -197,3 +197,5 @@ THOST = 'http://127.0.0.1:8000'
 # 路由结尾不是 / 时，访问路由会302到有 / 的地址。并且有一个warning。
 APPEND_SLASH = False
 
+# 在虚拟环境的终端下输入
+# celery -A simplifyML worker -l info  开启celery，可使注册流畅。也可添加其它异步任务。

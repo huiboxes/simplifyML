@@ -2,6 +2,7 @@ from django.conf import settings
 from django.core.mail import send_mail
 from simplifyML.celery import app
 
+
 # import os
 # import django
 # os.environ.setdefault("DJANGO_SETTINGS_MODULE", "async_mail_system.settings")
